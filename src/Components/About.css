@@ -1,0 +1,134 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 80px 170px;
+}
+
+.about-title {
+    position: relative;
+    text-align: center;
+}
+
+.about-title h1 {
+    padding: 0 30px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.about-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.about-sections {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Image on the left */
+.about-left img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -20px; /* Slight lift */
+}
+
+/* Right content */
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-para {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Skills section */
+.skills-container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.skill-name {
+    width: 150px; 
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.skill-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #df8908, #b491ff);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Achievements section */
+.about-achievements {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 80px 0;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .about-sections {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-left img {
+        width: 150px;
+        height: 250px;
+        top: -10px;
+    }
+
+    .about {
+        margin: 40px 20px;
+        gap: 40px;
+    }
+
+    .skill-name {
+        width: 100px;
+        font-size: 16px;
+    }
+}
